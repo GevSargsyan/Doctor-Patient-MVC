@@ -1,0 +1,162 @@
+﻿@model Diplomain_Sargsyan_Gevorg.Models.Doctor
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="~/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/css/page.css" rel="stylesheet" />
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <div class="menuReg">
+
+            <nav class="d-flex justify-content-end">
+
+                <ul class="Reg menulink">
+                    <li><a asp-controller="Account" asp-action="MyPagePatient">Իմ Էջ</a></li>
+                    <li class="Regend"><a asp-controller="Account" asp-action="Logout">Դուրս Գալ</a></li>
+                    <li><a href="">Հայ</a></li>
+                    <li><a href="">Рус</a></li>
+                    <li><a href="">Eng</a></li>
+                </ul>
+
+            </nav>
+
+        </div>
+
+        <div class="menu">
+
+            <div class="container">
+                <div class="row no-gutters">
+                    <div class="col-3 Logo">
+                        <a asp-controller="Home" asp-action="Index"><h3><span>M</span>EDICAL</h3></a>
+                    </div>
+
+
+                    <div class="col-9">
+                        <nav class="d-flex justify-content-end">
+                            <ul class="Reg menulink">
+                                <li><a asp-controller="Home" asp-action="Index">Գլխավոր</a></li>
+                                <li><a asp-controller="Home" asp-action="Doctors">Բժիշկներ</a></li>
+                            </ul>
+
+
+                        </nav>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </header>
+
+    <div class="container-fluid">
+
+        <div class="row no-gutters">
+            <div class="col-xl-4 col-md-12 nkar">
+
+                <div class="ramka">
+                    <form asp-action="Update" asp-controller="Account" method="post">
+
+                        <img src="data:image/jpeg;base64,@(Convert.ToBase64String(ViewBag.Patient.Avatar))">
+                    </form>
+                </div>
+
+            </div>
+
+            <div class="col-xl-8 col-md-12 anceta">
+
+
+
+                <div class="patuhan ">
+
+
+                    <div class="tox">
+                        <strong>Անուն</strong>
+                        <input type="text" disabled name="anun" value="@ViewBag.Patient.FirstName">
+                    </div>
+
+                    <div class="tox">
+                        <strong>Ազգանուն</strong>
+                        <input type="text" disabled name="azg" value="@ViewBag.Patient.LastName">
+                    </div>
+
+                    <div class="tox">
+                        <strong>Հայրանուն</strong>
+                        <input type="text" disabled name="azg" value="@ViewBag.Patient.MiddleName">
+                    </div>
+
+                    <div class="tox">
+                        <strong>Տարիք</strong>
+                        <input type="text" disabled name="age" value="@ViewBag.Patient.Age">
+                    </div>
+
+                    <div class="tox">
+                        <strong>Մեյլ</strong>
+                        <input type="text" disabled name="age" value="@ViewBag.Patient.Email">
+                    </div>
+
+                    <div class="tox">
+                        <strong>Հեռախոսահամար</strong>
+                        <input type="text" disabled name="num" value="@ViewBag.Patient.PhoneNumber">
+                    </div>
+
+
+
+
+
+
+                </div>
+
+
+
+            </div>
+
+
+        </div>
+
+
+
+
+
+    </div>
+
+
+
+    <footer class="foot2">
+        <div class="container">
+            <div class="row no-gutters">
+
+                <div class="col-6">
+                    <ul class="footul">
+                        <li><a href="">Home Page</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="">About Us</a></li>
+                        <li><a name="contacts"></a></li>
+                    </ul>
+
+                </div>
+                <div class="col-6 d-flex justify-content-end">
+                    <p>Copyright ⓒ 2021. All rights reserved by Medical</p>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+    </footer>
+
+</body>
+</html>
+
+
+

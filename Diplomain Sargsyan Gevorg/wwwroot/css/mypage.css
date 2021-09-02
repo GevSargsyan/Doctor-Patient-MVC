@@ -1,0 +1,18 @@
+﻿
+.page {
+    width: 700px;
+    margin-top:150px;
+}
+
+#img {
+    padding-top: 254px;
+}
+
+
+.RegContainer {
+    max-width: 665px;
+    background: rgba(43, 160, 196, 0.4);
+    margin-left: 150px;
+    margin-top: 50px;
+    border-radius: 20px;
+}

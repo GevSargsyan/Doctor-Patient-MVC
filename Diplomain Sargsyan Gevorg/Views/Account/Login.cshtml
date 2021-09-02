@@ -1,0 +1,159 @@
+﻿
+@model entityentitiy.ViewModels.LoginView
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="~/css/style.css" rel="stylesheet" />
+    <link href="~/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/css/register.css" rel="stylesheet" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,600&family=Libre+Baskerville&family=Noto+Sans+TC&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&family=Josefin+Sans:ital,wght@1,600&family=Libre+Baskerville&family=Noto+Sans+TC&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;300&family=Cairo:wght@300&family=Josefin+Sans:ital,wght@1,600&family=Libre+Baskerville&family=Noto+Sans+TC&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@600&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@500&display=swap" rel="stylesheet">
+    <title>Register as Doctor</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <header>
+            <div class="menuReg">
+
+                <nav class="d-flex justify-content-end">
+
+                    <ul class="Reg menulink">
+                        <li><a asp-controller="Account" asp-action="Login">Մուտք</a></li>
+                        <li class="Regend"><a asp-controller="Account" asp-action="Register">Գրանցվել</a></li>
+                        <li><a href="">Հայ</a></li>
+                        <li><a href="">Рус</a></li>
+                        <li><a href="">Eng</a></li>
+                    </ul>
+
+                </nav>
+
+            </div>
+
+            <div class="menu">
+
+                <div class="container">
+                    <div class="row no-gutters">
+                        <div class="col-3 Logo">
+                            <a asp-action="index" asp-controller="Home"><h3><span>M</span>EDICAL</h3></a>
+                        </div>
+
+
+                        <div class="col-9">
+                            <nav class="d-flex justify-content-end">
+                                <ul class="Reg menulink">
+                                    <li><a asp-controller="Home" asp-action="Index">Գլխավոր</a></li>
+                                    <li><a asp-controller="Home" asp-action="Index">Ծառայություններ</a></li>
+                                    <li><a asp-controller="Home" asp-action="Index">Բժիշկներ</a></li>
+                                    <li><a asp-controller="Home" asp-action="Index">Կոնտակտներ</a></li>
+                                </ul>
+
+
+                            </nav>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="RegContainer">
+
+                <form asp-action="Login" asp-controller="Account" method="post" enctype="multipart/form-data">
+
+                    <div class="row no-gutters">
+                        <div class="col-12 Regh1"><h1>Մուտք</h1></div>
+
+
+                        <div class="col-6 inputbuts">
+                            <p>Մուտքանուն :</p>
+                        </div>
+                        <div class="col-6 inputbuts">
+
+                            <input type="text" asp-for="Login">
+                            <span asp-validation-for="Login"></span>
+                        </div>
+
+                        <div class="col-6 inputbuts">
+                            <p>Գաղտնաբառ :</p>
+                        </div>
+                        <div class="col-6 inputbuts">
+
+                            <input type="password" asp-for="Password">
+                            <span asp-validation-for="Password"></span>
+                        </div>
+
+                        <div class="col-6 inputbuts">
+                            <p>Մուտք որպես բժիշկ :</p>
+                        </div>
+                        <div class="col-6 inputbuts">
+
+
+                            <input class="check" asp-for="IsDoctor" />
+                            <span asp-validation-for="IsDoctor" />
+                        </div>
+                        <div asp-validation-summary="ModelOnly"></div>
+                        @*<div>
+                                @ViewBag.Mes
+                            </div>*@
+                        <div class="col-12 inputbuts">
+                            <button type="submit">Մուտք</button>
+                        </div>
+
+                    </div>
+                </form>
+
+            </div>
+
+        </header>
+    </div>
+
+    <footer class="foot">
+        <div class="container">
+            <div class="row no-gutters">
+
+                <div class="col-6">
+                    <ul class="footul">
+                        <li><a href="">Home Page</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="">About Us</a></li>
+                        <li><a name="contacts"></a></li>
+                    </ul>
+
+                </div>
+                <div class="col-6 d-flex justify-content-end">
+                    <p>Copyright ⓒ 2021. All rights reserved by Medical</p>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+    </footer>
+</body>
+</html>

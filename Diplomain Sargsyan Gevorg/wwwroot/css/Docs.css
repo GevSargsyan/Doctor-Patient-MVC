@@ -1,0 +1,31 @@
+﻿.docsec .iconrow img {
+    border: 1px black solid;
+    border-radius: 10px;
+    margin-left: 30px;
+}
+
+.docsec .iconrow {
+    border-radius: 5px;
+}
+.docsec h3 {
+    font-size: 20px;
+    font-family: 'Noto Sans TC', sans-serif;
+    margin-top: 10px;
+   padding-left:150px;
+   
+}
+
+.docsec {
+    background-color: aliceblue;
+}
+.docsec p {
+        font-size: 15px;
+        font-family: 'Libre Baskerville', serif;
+        
+        margin-top: 10px;
+        max-width: 320px;
+        padding-left: 150px;
+    }
+
+
+

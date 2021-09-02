@@ -1,0 +1,127 @@
+﻿@using Diplomain_Sargsyan_Gevorg.Models
+@model IEnumerable<Doctor>
+
+
+@{
+    int count = Model.Count();
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="~/css/doctors.css" rel="stylesheet" />
+    <link href="~/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/css/style.css" rel="stylesheet" />
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <div class="menuReg">
+
+            <nav class="d-flex justify-content-end">
+
+                <ul class="Reg menulink">
+                    <li><a asp-controller="Account" asp-action="MyPagePatient">Իմ Էջ</a></li>
+                    <li class="Regend"><a asp-controller="Account" asp-action="Logout">Դուրս Գալ</a></li>
+                    <li><a href="">Հայ</a></li>
+                    <li><a href="">Рус</a></li>
+                    <li><a href="">Eng</a></li>
+                </ul>
+
+            </nav>
+
+        </div>
+
+        <div class="menu">
+
+            <div class="container">
+                <div class="row no-gutters">
+                    <div class="col-3 Logo">
+                        <a asp-controller="Home" asp-action="Index"><h3><span>M</span>EDICAL</h3></a>
+                    </div>
+
+
+                    <div class="col-9">
+                        <nav class="d-flex justify-content-end">
+                            <ul class="Reg menulink">
+                                <li><a asp-controller="Home" asp-action="Index">Գլխավոր</a></li>
+                                <li><a asp-controller="Home" asp-action="Doctors">Բժիշկներ</a></li>
+                            </ul>
+
+
+                        </nav>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </header>
+    <div class="container">
+
+        <div class="row mt-5">
+
+
+            @if (count == 0)
+            {
+                <h1 class="er">Դուք Չունեք Բժիշկներ</h1>
+            }
+            @if (count != 0)
+            {
+                <h1 class="im">Իմ Բժիշկներ</h1>
+
+            }
+
+
+            @foreach (var item in Model)
+            {
+
+                <div class="col-md-2 col-12 offset-2 offset-md-0 profile-box border p-1 rounded text-center mr-5 mb-2 bg-light">
+                    <img @*style='width:300px; height:300px;'*@ src="data:image/jpeg;base64,@(Convert.ToBase64String(item.Avatar))" class="w-100 mb-1">
+                    <h5 class="m-0"><strong>@item.FirstName</strong></h5>
+                    <h5 class="m-0"><strong>@item.LastName</strong></h5>
+                    <p class="mb-2">@item.Speciality</p>
+                    <a asp-action="DoctorPersonal" asp-controller="Home" asp-route-id="@item.Id" class="btn btn-secondary btn-sm">Ավելին</a>
+                    <a asp-action="ChatPatient" asp-controller="Home" asp-route-id="@item.UserId" class="btn btn-primary btn-sm">Նամակ</a>
+                    <a asp-action="DeleteDoc" asp-controller="Home" asp-route-id="@item.Id" class="btn btn-danger btn-sm">Ջնջել</a>
+                </div>
+
+
+            }
+        </div>
+    </div>
+    <footer class="foot2">
+        <div class="container">
+            <div class="row no-gutters">
+
+                <div class="col-6">
+                    <ul class="footul">
+                        <li><a href="">Home Page</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="">About Us</a></li>
+                        <li><a name="contacts"></a></li>
+                    </ul>
+
+                </div>
+                <div class="col-6 d-flex justify-content-end">
+                    <p>Copyright ⓒ 2021. All rights reserved by Medical</p>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+    </footer>
+
+</body>
+</html>

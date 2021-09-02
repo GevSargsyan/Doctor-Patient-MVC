@@ -1,0 +1,92 @@
+﻿header {
+    height: 80px !important;
+}
+/*.Main{
+    background-color:aqua;
+    min-height:970px;
+}
+
+.ramka {
+    border-style: solid;
+    border-width: 1px;
+}*/
+body {
+    font-family: 'Ropa Sans', sans-serif;
+    background: #f3e6e6 !important;
+}
+
+.profile-box img {
+    height: 180px;
+}
+
+.profile-box button {
+    font-size: 12px;
+}
+
+.profile-box p {
+    font-size: 13px;
+    line-height: 1;
+}
+.foot {
+    margin-top: 163px !important;
+
+}
+.foot2 {
+    margin-top: 441px !important;
+    height: 135px;
+    background-color: #ccd5e4;
+}
+
+.footul {
+    display: block;
+    list-style-type: none;
+    margin-top: 56px;
+    padding: 0;
+    color: #868686;
+}
+
+.foot2 p{
+    display: block;
+    list-style-type: none;
+    margin-top: 56px;
+    padding: 0;
+    color: #868686;
+}
+
+.foot2 ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+
+.foot2 ul li a {
+        color: #868686;
+        display: inline-block;
+        margin: 0 auto;
+        text-decoration: none;
+        font-weight: bold;
+}
+
+.foot2 ul li a:hover {
+            text-decoration: underline;
+}
+
+.search {
+    position: absolute;
+    width: 150px;
+    right: 350px;
+}
+ 
+
+.er{
+    margin-top:220px;
+}
+
+.im {
+    margin-top: -52px;
+    position: absolute;
+    left: 450px;
+}
+.formspec{
+    margin-top:20px;
+}

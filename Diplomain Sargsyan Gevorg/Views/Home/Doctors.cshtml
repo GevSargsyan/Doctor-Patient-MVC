@@ -1,0 +1,221 @@
+﻿@using Diplomain_Sargsyan_Gevorg.Models
+@model IEnumerable<Doctor>
+
+@{
+    int count = Model.Count();
+
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="~/css/doctors.css" rel="stylesheet" />
+    <link href="~/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/css/style.css" rel="stylesheet" />
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <div class="menuReg">
+
+            <nav class="d-flex justify-content-end">
+
+                <ul class="Reg menulink">
+                    @if (ViewBag.IsDoctor)
+                    {
+
+                    <li><a asp-controller="Account" asp-action="MyPageDoctor">Իմ Էջ</a></li>
+                    }
+                    @if (!ViewBag.IsDoctor)
+                    {
+
+                    <li><a asp-controller="Account" asp-action="MyPagePatient">Իմ Էջ</a></li>
+                    }
+
+                    <li class="Regend"><a asp-controller="Account" asp-action="Logout">Դուրս Գալ</a></li>
+                    <li><a href="">Հայ</a></li>
+                    <li><a href="">Рус</a></li>
+                    <li><a href="">Eng</a></li>
+                </ul>
+
+            </nav>
+
+        </div>
+
+        <div class="menu">
+
+            <div class="container">
+                <div class="row no-gutters">
+                    <div class="col-3 Logo">
+                        <a asp-controller="Home" asp-action="Index"><h3><span>M</span>EDICAL</h3></a>
+                    </div>
+
+
+                    <div class="col-9">
+                        <nav class="d-flex justify-content-end">
+                            <ul class="Reg menulink">
+                                <li><a asp-controller="Home" asp-action="Index">Գլխավոր</a></li>
+                                <li><a asp-controller="Home" asp-action="Doctors">Բժիշկներ</a></li>
+                            </ul>
+
+
+                        </nav>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </header>
+    <div class="container">
+        <form class="formspec" asp-action="Doctors" asp-controller="Home" method="post">
+            <select name="Option" >
+                <option>Search</option>
+                <option>Healthcare manager</option>
+                <option>Allergologist</option>
+                <option>Pathologist</option>
+                <option>Ophthalmologist</option>
+                <option>Anaesthesiologist-reanimatologist</option>
+                <option>Haematologist</option>
+                <option>Bacteriologist</option>
+                <option>Laboratory assistant</option>
+                <option>Cosmetologist</option>
+                <option>Gastroenterologist</option>
+                <option>Geneticist</option>
+                <option>Gynecologist</option>
+                <option>Embryologist</option>
+                <option>Endocrinologist</option>
+                <option>Endoscopist</option>
+                <option>General practitioner</option>
+                <option>Therapeutist</option>
+                <option>Dermatotrichologist</option>
+                <option>Narcologist</option>
+                <option>Pulmonologist</option>
+                <option>Hepatologist</option>
+                <option>Logopedist</option>
+                <option>Kinesiologist</option>
+                <option>Epidemiologist</option>
+                <option>Psychologist</option>
+                <option>Psychotherapeutist</option>
+                <option>Radiologist</option>
+                <option>Pediatrician</option>
+                <option>Manual therapeutist</option>
+                <option>Dermatovenerologist</option>
+                <option>Neonatologist</option>
+                <option>Nephrologist</option>
+                <option>Neuropatologist</option>
+                <option>Neurosurgeon</option>
+                <option>Oncologist</option>
+                <option>Urologist</option>
+                <option>Podologist</option>
+                <option>Proctologist</option>
+                <option>Rehabilitologist</option>
+                <option>Reflexotherapeutist</option>
+                <option>Rheumatologist</option>
+                <option>Medical sexologist</option>
+                <option>Nutritionist</option>
+                <option>Stomatologist</option>
+                <option>Cardiologist</option>
+                <option>Infectionist</option>
+                <option>Surgeon (vascular)</option>
+                <option>Surgeon (maxillofacial)</option>
+                <option>Surgeon (general)</option>
+                <option>Surgeon (thoracal)</option>
+                <option>Surgeon (pediatric)</option>
+                <option>Surgeon (plastic)</option>
+                <option>Surgeon (cardiovascular)</option>
+                <option>Traumatologist-orthopedist</option>
+                <option>Otorhinolaryngologist</option>
+                <option>Physiotherapeutist</option>
+            </select>
+            <button type="submit">Որոնել</button>
+        </form>
+        @if (count != 0)
+        {
+            <div class="row mt-5">
+
+
+                @foreach (var item in Model)
+                {
+
+                    <div class="col-md-2 col-12 offset-2 offset-md-0 profile-box border p-1 rounded text-center mr-5 mb-2 bg-light">
+                        <img @*style='width:300px; height:300px;'*@ src="data:image/jpeg;base64,@(Convert.ToBase64String(item.Avatar))" class="w-100 mb-1">
+                        <h5 class="m-0"><strong>@item.FirstName @item.LastName</strong></h5>
+                        <p class="mb-2">@item.Speciality</p>
+                        <a asp-action="DoctorPersonal" asp-controller="Home" asp-route-id="@item.Id" class="btn btn-primary btn-sm">Ավելին</a>
+                        <a asp-action="AddDoc" asp-controller="Account" asp-route-id="@item.Id" class="btn btn-danger btn-sm">Ավելացնել</a>
+
+                    </div>
+
+
+                }
+            </div>
+
+        }
+        @{
+            else if (count == 0)
+            {
+                
+
+                <h1 class="er">Ոչինչ չի գտնվել</h1>
+            }
+        }
+    </div>
+    <footer class="foot2">
+        <div class="container">
+            <div class="row no-gutters">
+
+                <div class="col-6">
+                    <ul class="footul">
+                        <li><a href="">Home Page</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="">About Us</a></li>
+                        <li><a name="contacts"></a></li>
+                    </ul>
+
+                </div>
+                <div class="col-6 d-flex justify-content-end">
+                    <p>Copyright ⓒ 2021. All rights reserved by Medical</p>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+    </footer>
+
+</body>
+</html>
+
+
+
+@*<h1>Doctors</h1>
+
+    <div class="col-3">
+        <h2 id="img">Նկար</h2>
+
+
+        @{
+            int i = 0;
+        }
+
+        @foreach (var item in Model)
+        {
+
+            <h2>Doctor-@(++i)</h2>
+            <h3>@item.Login</h3>
+            <h3>@item.Password</h3>
+            <img style='width:300px; height:300px;' src="data:image/jpeg;base64,@(Convert.ToBase64String(item.Avatar))" />
+            <a asp-action="AddDoc" asp-controller="Account" asp-route-id="@item.Id">Add To DocList</a>
+
+
+        }
+    </div>*@

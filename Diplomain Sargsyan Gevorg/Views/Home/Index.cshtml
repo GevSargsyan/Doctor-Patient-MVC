@@ -1,0 +1,24 @@
+﻿@{
+    if (!User.Identity.IsAuthenticated)
+    {
+        Layout = "~/Shared/_LayoutDefault.cshtml";
+
+    }
+    if (User.Identity.IsAuthenticated)
+    {
+        if (User.Claims.Any(x => x.Value == "doctor"))
+        {
+            Layout = "~/Shared/_LayoutDoctor.cshtml";
+
+
+        }
+
+        if (User.Claims.Any(x => x.Value == "patient"))
+        {
+            Layout = "~/Shared/_LayoutUser.cshtml";
+
+        }
+    }
+
+
+}

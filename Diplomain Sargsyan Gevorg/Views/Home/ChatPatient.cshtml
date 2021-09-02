@@ -1,0 +1,123 @@
+﻿
+@model Diplomain_Sargsyan_Gevorg.Models.Doctor
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ChatApp</title>
+    <link href="~/css/chat.css" rel="stylesheet" />
+    @*<link href="~/css/bootstrap.css" rel="stylesheet" />*@
+</head>
+<body>
+
+    <div class="navbar">
+        <a asp-action="Index" asp-controller="Home" class="room-button">Գլխավոր</a>
+        <a asp-action="MyPagePatient" asp-controller="Account" class="room-button">Իմ Էջ</a>
+
+    </div>
+
+    <div class="main">
+        <div class="side-menu">
+            @foreach (var item in ViewBag.Doctors)
+            {
+                
+            <a asp-action="ChatPatient" asp-controller="Home" asp-route-id="@item.UserId" class="room-button">@item.FirstName @item.LastName</a>
+
+            }
+        </div>
+        <div class="chat">
+            <input id="userName" value="@User.Identity.Name" type="text" hidden />
+            <input id="userfrom" value="@ViewBag.Id" type="text" hidden />
+            <input id="userto" value="@Model.User.Id" type="text" hidden />
+            <input id="isdoctor" value="@ViewBag.IsDoctor" type="text" hidden />
+            <input id="fname" value="@ViewBag.Fname" type="text" hidden />
+
+           
+            <div id="chatroom" class="chat-body">
+
+
+
+                @foreach (var item in ViewBag.Mes)
+                {
+                <div  class="message">
+                    @{
+                        if (item.IsDoctor == "1")
+                        {
+                            <header>@item.Doctor.FirstName  @item.Doctor.LastName:</header>
+
+                        }
+                        if (item.IsDoctor == "0")
+                        {
+                            <header>@item.Patient.FirstName  @item.Patient.LastName:</header>
+
+                        }
+                    }
+                    <p>@item.Text</p>
+                    <footer>@item.Timestamp</footer>
+                </div>
+
+                }
+
+
+            </div>
+
+
+            <div class="chat-input">
+                <input type="text" id="message" name="name" value="" />
+                <button id="sendBtn" class="btn btn-primary">Send</button>
+
+            </div>
+
+            <script src="~/js/microsoft/signalr/dist/browser/signalr.min.js"></script>
+
+  <script>
+    const hubConnection = new signalR.HubConnectionBuilder()
+        .withUrl("/chat")
+        .build();
+
+
+    // получение сообщения от сервера
+    hubConnection.on('Send', function (message, userName) {
+        let fname = document.getElementById("fname").value;
+
+        // создаем элемент <b> для имени пользователя
+        let userNameElem = document.createElement("b");
+        userNameElem.appendChild(document.createTextNode(fname + ': '));
+
+        // создает элемент <p> для сообщения пользователя
+        let elem = document.createElement("p");
+        elem.appendChild(userNameElem);
+        elem.appendChild(document.createTextNode(message));
+
+        var lastElem = document.getElementById("chatroom").lastChild;
+
+        document.getElementById("chatroom").insertBefore(elem, lastElem);
+
+
+
+    });
+
+
+    // отправка сообщения на сервер
+       document.getElementById("sendBtn").addEventListener("click", function (e) {
+        let userName = document.getElementById("userName").value;
+
+        let message = document.getElementById("message").value;
+        let to = document.getElementById("userto").value;
+        let fromid = document.getElementById("userfrom").value;
+        let isdoctor = document.getElementById("isdoctor").value;
+  
+            hubConnection.invoke("SendDoctor", message, userName, to);
+            hubConnection.invoke("SendSavePatient", message, fromid, to,isdoctor);
+
+    });
+
+    hubConnection.start();
+            </script>
+        </div>
+    </div>
+</body>
+</html>

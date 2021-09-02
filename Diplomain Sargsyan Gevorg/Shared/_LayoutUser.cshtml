@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="~/css/style.css" rel="stylesheet" />
+    <link href="~/css/bootstrap.css" rel="stylesheet" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,600&family=Libre+Baskerville&family=Noto+Sans+TC&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&family=Josefin+Sans:ital,wght@1,600&family=Libre+Baskerville&family=Noto+Sans+TC&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;300&family=Cairo:wght@300&family=Josefin+Sans:ital,wght@1,600&family=Libre+Baskerville&family=Noto+Sans+TC&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@600&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@500&display=swap" rel="stylesheet">
+    <title>Home</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <header>
+            <div class="menuReg">
+
+                <nav class="d-flex justify-content-end">
+
+                    <ul class="Reg menulink">
+                        <li><a asp-controller="Account" asp-action="MyPagePatient">Իմ Էջ</a></li>
+                        <li class="Regend"><a asp-controller="Account" asp-action="Logout">Դուրս Գալ</a></li>
+                        <li><a href="">Հայ</a></li>
+                        <li><a href="">Рус</a></li>
+                        <li><a href="">Eng</a></li>
+                    </ul>
+
+                </nav>
+
+            </div>
+
+            <div class="menu">
+
+                <div class="container">
+                    <div class="row no-gutters">
+                        <div class="col-3 Logo">
+                            <a asp-controller="Home" asp-action="Index"><h3><span>M</span>EDICAL</h3></a>
+                        </div>
+
+
+                        <div class="col-9">
+                            <nav class="d-flex justify-content-end">
+                                <ul class="Reg menulink">
+                                    <li><a asp-controller="Home" asp-action="Index">Գլխավոր</a></li>
+                                    <li><a asp-controller="Home" asp-action="Doctors">Բժիշկներ</a></li>
+                                    <li><a asp-controller="Account" asp-action="MyDocs">Իմ Բժիշկներ</a></li>
+                                    
+                                </ul>
+
+
+                            </nav>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="container">
+                <div class="row no-gutters">
+                    <div class="col-6 Poster">
+
+
+                        <h2>Դիտել<br><span>Բժիշկներին</span></h2>
+                        <a asp-controller="Home" asp-action="Doctors">Դիտել</a>
+
+
+                    </div>
+                </div>
+
+            </div>
+        </header>
+
+
+        <div>
+            @RenderBody()
+        </div>
+        <section class="sec4">
+            <div class="container">
+                <div class="row no-gutters">
+                    <div class="col-6">
+                        <div class="contact">Contact with us</div>
+                        <p class="adress">Yerevan,Armenia</p>
+                        <p class="p2">Phone <span>(+374) 99 999 999</span></p>
+                        <p class="p2">E-mail:<span>contact@Medical.com</span></p>
+                        <ul>
+                            <li><a href=""><img src="../images/social/twit.png" alt=""></a></li>
+                            <li><a href=""><img src="../images/social/fb.png" alt=""></a></li>
+                            <li><a href=""><img src="../images/social/pi.png" alt=""></a></li>
+                            <li><a href=""><img src="../images/social/gm.png" alt=""></a></li>
+                            <li><a href=""><img src="../images/social/mail.png" alt=""></a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-6">
+                        <form action="" method="POST"></form>
+                        <input type="text" name="name" placeholder="Your Name">
+                        <input type="email" name="email" placeholder="Your e-mail adress">
+                        <textarea placeholder="Your Message"></textarea>
+                        <a class="footbut" href="/">Send Message</a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <footer class="foot">
+            <div class="container">
+                <div class="row no-gutters">
+
+                    <div class="col-6">
+                        <ul class="footul">
+                            <li><a href="">Home Page</a></li>
+                            <li><a href="#Services">Services</a></li>
+                            <li><a href="">About Us</a></li>
+                            <li><a name="contacts"></a></li>
+                        </ul>
+
+                    </div>
+                    <div class="col-6 d-flex justify-content-end">
+                        <p>Copyright ⓒ 2021. All rights reserved by Medical</p>
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+    </div>
+
+</body>
+</html>

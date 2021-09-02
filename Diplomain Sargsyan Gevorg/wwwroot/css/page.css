@@ -1,0 +1,200 @@
+﻿
+
+header {
+    height: 80px;
+    background-image: url(..//images/background.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.menuReg {
+    height: 25px;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+/*.Regend{
+   
+}*/
+
+.menulink a {
+    color: black;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+    .menulink a:hover {
+        color: #6bc2f1;
+        font-family: 'Noto Sans TC', sans-serif;
+    }
+
+.menu {
+    height: 55px;
+    background: rgba(255,255,255,0.8);
+}
+
+
+.Logo span {
+    color: #6bc2f1;
+    font-size: 20px;
+}
+
+.Logo h3 {
+    display: block;
+    color: black;
+    font-size: 20px;
+}
+
+.Logo a {
+    display: block;
+    width: 100px;
+}
+
+/***********REGISTRATION***********/
+.Reg {
+    list-style: none;
+    padding-top: 5px;
+}
+
+    .Reg li {
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+
+.foot2 {
+    width: 100%;
+    /*breite: 100%*/
+    padding: 0;
+    margin: 0;
+    background-color: #ccd5e4;
+    /*Hintergrundfarbe*/
+}
+
+.footul {
+    display: block;
+    list-style-type: none;
+    margin-top: 56px;
+    padding: 0;
+    color: #868686;
+}
+
+.foot2 p {
+    display: block;
+    list-style-type: none;
+    margin-top: 56px;
+    padding: 0;
+    color: #868686;
+}
+
+.foot2 ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+
+    .foot2 ul li a {
+        color: #868686;
+        display: inline-block;
+        margin: 0 auto;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+        .foot2 ul li a:hover {
+            text-decoration: underline;
+        }
+
+.search {
+    position: absolute;
+    width: 150px;
+    right: 350px;
+}
+
+
+.er {
+    margin-top: 200px;
+}
+
+.formspec {
+    margin-top: 20px;
+}
+
+.nkar {
+    border: 1px solid;
+    min-height: 500px;
+    background-color: #CCD5E4;
+    padding: 60px !important;
+}
+
+.ramka a {
+    display: flex;
+    flex-direction: column;
+}
+
+.ramka img {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: row;
+    /* position: absolute;
+    top: 25%;
+    right: 25%;*/
+    border: 1px solid black;
+}
+
+.anceta {
+    border: 1px solid;
+    min-height: 793px;
+    background-color: #f1f5fb;
+    width: 100%;
+}
+
+.patuhan {
+   
+    margin: 60px;
+    height: auto;
+    width: 70%;
+}
+
+.tox {
+    display: flex;
+    flex-direction: row;
+    margin-top:40px;
+}
+
+    .tox strong{
+       
+        min-width: 200px;
+        margin-left: 60px;
+    }
+
+    .tox input {
+        min-width: 550px;
+        margin-left: 60px;
+        background-color: #CCD5E4;
+    }
+
+.knop {
+   position:absolute;
+   right:26%;
+   top:90%;
+}
+
+@media screen and (max-width: 930px) {
+    .tox input {
+        min-width: 120px;
+    }
+
+    .tox p {
+        /*        min-width:120px;
+      
+    }
+    .anceta{
+     height: 400px;
+    }
+*/
+    }
+} 
+

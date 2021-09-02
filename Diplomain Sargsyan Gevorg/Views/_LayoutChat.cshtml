@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ChatApp</title>
+    <link href="~/css/chat.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div class="navbar">
+
+    </div>
+
+    <div class="main">
+        <div class="side-menu">
+            <a asp-action="ChatPatient" asp-controller="Home" asp-route-id="" class="room-button">Room</a>
+            <a href="#" class="room-button"><strong>+</strong></a>
+        </div>
+        <div class="chat">
+            
+        @RenderBody()
+        </div>
+    </div>
+</body>
+</html>

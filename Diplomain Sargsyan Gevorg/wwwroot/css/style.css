@@ -1,0 +1,380 @@
+header{
+    height: 950px;
+    background-image: url(..//images/background.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.menuReg{
+    height: 25px;
+    
+    background: rgba(255, 255, 255, 0.8);
+}
+
+/*.Regend{
+   
+}*/
+
+.menulink a
+{
+    color: black;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+.menulink a:hover
+{
+    color:#6bc2f1 ;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+.menu{
+    height: 55px;
+    
+    background: rgba(255,255,255,0.8);
+}
+
+
+.Logo span{
+   color:#6bc2f1;
+   font-size: 20px;
+} 
+
+.Logo h3{
+    display: block;
+    color:black;
+    font-size:20px;
+ } 
+
+.Logo a{
+    display: block;
+    width: 100px;
+ }
+
+ /***********REGISTRATION***********/
+ .Reg{
+    list-style: none;
+    padding-top: 5px;
+ }
+ .Reg li{
+    display: inline-block;
+    margin-right: 10px;
+ }
+
+  /***********Poster***********/
+
+
+.Poster{
+    font-family: 'Libre Baskerville', serif;
+    margin-top: 282px;
+}
+.Poster h2{
+    color:white;
+    font-size: 52px;
+
+}
+.Poster span{
+    font-size: 62px;
+
+}
+
+.Poster p{
+    color: white;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 25px;
+}
+
+.Poster a{
+    display: block;
+    width: 200px;
+    height: 45px;
+    margin: 0 auto;
+    text-decoration: none;
+    color: #0c354a;
+    background-color: white;
+    text-align: center;
+    padding-top: 10px;
+    font-size: 17px;
+    font-family: 'Cairo', sans-serif;
+    border: white 1px;
+    border-radius: 15px;
+    margin-top: 70px;
+    
+}
+.Poster a:hover{
+    
+background-color:#0c354a ;
+color: white;
+text-decoration: none;
+}
+
+/**************Doctxt**************/
+.sec1{
+    height: 720px;
+}
+
+.doctxt{
+margin-top: 150px;
+
+}
+.doctxt h3{
+    
+    color:#00537F ;
+    font-size: 50px;
+     font-family: 'Barlow Condensed', sans-serif;
+    
+}
+.doctxt h2{
+    font-family: 'Libre Baskerville', serif;
+    color: #000;
+    margin-top:22px;
+}
+.doctxt p{
+margin-top: 30px;
+ max-width: 525px;
+ font-family: 'Barlow Condensed', sans-serif;
+ font-size: 20px;
+}
+
+
+
+/**************DocImg**************/
+.DocImg{
+    margin-top: 110px;
+max-height: 610px;
+ background: white;
+
+ 
+ }
+ 
+ /**************icons**************/
+
+.sec2{
+    height: 520px;
+    background:#f1f1f1;
+}
+
+.sec2 .Serv{
+text-align: center;
+color:#6bc2f1 ;
+font-size: 35px;
+font-family: 'Libre Baskerville', serif;
+
+border-bottom: black 1px solid;
+
+}
+.sec2 h3{
+  font-size: 25px;
+  text-align: center;
+  font-family: 'Noto Sans TC', sans-serif;
+  margin-top: 10px;
+  
+ }
+
+ .sec2 p{
+   font-size: 20px;
+   font-family: 'Libre Baskerville', serif;
+   text-align: center;
+   margin-top: 10px;
+   max-width: 320px;
+   padding-left: 60px;
+
+ }
+
+.sec2 img{
+   display: block;
+   margin: 0 auto;
+}
+
+.iconrow{
+    margin-top: 120px;
+}
+
+ /**************Doctors**************/
+ .sec3
+ {
+    
+    background:#dedee4;
+
+ }
+
+.sec3 .Serv{
+    text-align: center;
+    color:#6bc2f1 ;
+    font-size: 35px;
+    font-family: 'Libre Baskerville', serif;
+    
+    border-bottom: black 1px solid;
+    
+    }
+
+ .sec3 .iconrow img{
+   border: 1px black solid;
+   border-radius: 10px;
+   margin-left: 30px;
+ }
+
+ .sec3 h3{
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Noto Sans TC', sans-serif;
+    margin-top: 10px;
+    
+   }
+  
+   .sec3 p{
+     font-size: 15px;
+     font-family: 'Libre Baskerville', serif;
+     text-align: center;
+     margin-top: 10px;
+     max-width: 320px;
+     padding-left: 60px;
+    
+}
+  
+
+/****************Contact*************/
+.sec4
+{
+    background-image: url(../images/footerbg.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 724px;
+
+}
+
+.contact
+{
+    color: white;
+    font-size: 60px;
+    font-weight: bold;
+    margin-top: 115px;
+    font-weight: bold;
+
+}
+.adress{
+    font-size:  18px;
+    color:#878787;
+    margin-top: 30px;
+}
+
+
+.p2
+{   
+     color:#878787;
+font-size: 32px;
+margin-top: 24px;
+    
+
+}
+.sec4 p span{
+    color: #2EBAEE;
+}
+
+.sec4 ul{
+    list-style-type: none;
+    margin-top: 70px;
+    padding: 0;
+}
+
+.sec4 ul li{
+
+    display: inline-block;
+    margin-right: 25px;
+    padding-left: 0;
+    
+}
+
+.sec4 input[type="text"],.sec4 input[type="email"]
+{
+
+    width: 635px;
+    height: 60px;
+    background:none;
+    border-radius: 6px;
+    border:1px solid #535353;
+    font-size: 17px;
+    display: block;
+    padding-left: 30px;
+    margin-top: 20px auto;
+    margin-bottom: 25px;
+
+    color: white;
+
+}
+
+.sec4 input[type="text"]
+{
+    margin-top: 126px;
+}
+
+.sec4 textarea{
+    width: 635px;
+    height: 200px;
+    background: none;
+    border-radius: 6px;
+    border:1px solid #535353;
+    color: white;
+    font-size: 17px;
+    display: block;
+    padding-left: 30px;
+    margin-top: 20px auto;
+    resize: none ;
+}
+
+.footbut{
+    background-color: #2EBAEE;
+    display:block;
+    width: 150px;
+    height: 40px;
+    text-align: center;
+    padding-top: 10px;
+    border-radius: 25px;
+    font-size: 14px;
+    color: white;
+    text-decoration:none ;
+    margin: 30px auto;
+
+}
+
+.footbut:hover{
+    color: #2EBAEE;
+    background-color: white;
+    border:#2EBAEE solid 1px;
+    text-decoration: none;
+}
+
+/************Footer************/
+.foot {
+    height: 135px;
+    background-color: #ccd5e4;
+}
+
+.footul,.foot p{
+    display: block;
+    list-style-type: none;
+    margin-top: 56px;
+    padding: 0;
+    color: #868686;
+
+}
+.foot ul li{
+   
+    display: inline-block;
+    margin-right: 20px;
+    
+}
+
+
+.foot ul li a{
+    color: #868686;
+    display: inline-block;
+    margin: 0 auto;
+    text-decoration: none;
+    font-weight: bold;
+    
+}
+
+.foot ul li a:hover{
+  
+    text-decoration:underline;
+    
+}

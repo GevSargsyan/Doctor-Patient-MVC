@@ -1,0 +1,198 @@
+header{
+    height: 950px;
+    background-image: url(..//images/background.png);
+    background-repeat: no-repeat;
+}
+
+.menuReg{
+    height: 25px;
+    
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.Regend{
+    border-right: black 1px solid;
+}
+
+.menulink a
+{
+    color: black;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+.menulink a:hover
+{
+    color:#6bc2f1 ;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+.menu{
+    height: 55px;
+    
+    background: rgba(255,255,255,0.8);
+}
+
+
+.Logo span{
+   color:#6bc2f1;
+   font-size: 20px;
+} 
+
+.Logo h3{
+    display: block;
+    color:black;
+    font-size:20px;
+ } 
+
+.Logo a{
+    display: block;
+    width: 100px;
+ }
+
+ /***********REGISTRATION***********/
+ .Reg{
+    list-style: none;
+    padding-top: 5px;
+ }
+ .Reg li{
+    display: inline-block;
+    margin-right: 10px;
+ }
+
+
+/* **********REGISTRATIONWINDOW***********/
+.RegContainermenu
+{
+    max-width:580px;
+    background: rgba(43, 160, 196, 0.4);
+    margin-left: 360px;
+    margin-top: 320px;
+    border-radius: 20px;
+}
+
+.RegContainer {
+    max-width: 580px;
+    background: rgba(43, 160, 196, 0.4);
+    margin-left: 200px;
+    margin-top: 100px;
+    border-radius: 20px;
+}
+
+
+
+.Regh1 {
+    text-align: center;
+    font-family: 'Merriweather Sans', sans-serif;
+    color: #0c354a;
+}
+
+.inputbuts
+{
+    margin-top: 15px;
+}
+/*
+.inputbuts input,select
+{
+   
+   
+    background: none;
+    color: #0c354a;
+}
+*/
+
+
+.inputbuts p
+{
+    font-family: 'Bodoni Moda', serif;
+    padding-left: 10px;
+    font-size: 20px;
+    color: #0c354a;
+}
+
+.inputbuts a{
+    display: block;
+    
+    height: 45px;
+    width: 230px;
+    margin: 0 auto;
+    text-decoration: none;
+    color: #0c354a;
+    background-color: white;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 25px;
+    font-family: 'Cairo', sans-serif;
+    border: white 1px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+
+}
+
+.inputbuts a:hover{
+background-color:#0c354a ;
+color: white;
+text-decoration: none;
+}
+
+
+.inputbuts button{
+    display: block;
+    margin-top: -200px;
+    height: 45px;
+    width: auto;
+    margin: 0 auto;
+    text-decoration: none;
+    color: #0c354a;
+    background-color: white;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 25px;
+    font-family: 'Cairo', sans-serif;
+    border: white 1px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+
+}
+
+.inputbuts button:hover{
+background-color:#0c354a ;
+color: white;
+text-decoration: none;
+}
+
+/*
+***********Footer************/
+.foot {
+    height: 135px;
+    background-color: #ccd5e4;
+}
+
+.footul,.foot p{
+    display: block;
+    list-style-type: none;
+    margin-top: 56px;
+    padding: 0;
+    color: #868686;
+
+}
+.foot ul li{
+   
+    display: inline-block;
+    margin-right: 20px;
+    
+}
+
+
+.foot ul li a{
+    color: #868686;
+    display: inline-block;
+    margin: 0 auto;
+    text-decoration: none;
+    font-weight: bold;
+    
+}
+
+.foot ul li a:hover{
+  
+    text-decoration:underline;
+    
+}
